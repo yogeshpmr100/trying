@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetConnect Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="landing-container">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-video"></i>
+                <span>MeetConnect Pro</span>
+            </div>
+        </nav>
+        
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Connect Instantly with Anyone, Anywhere</h1>
+                <p>High-quality video meetings with up to 50 participants.</p>
+            </div>
+            
+            <div class="options-container">
+                <div class="glass-card create-meet">
+                    <div class="card-header">
+                        <i class="fas fa-plus-circle"></i>
+                        <h2>Create Meeting</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="createUsername" placeholder="Your name">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="text" id="createPassword" placeholder="Set meeting password">
+                        </div>
+                        <button onclick="createMeeting()" class="primary-btn">
+                            <i class="fas fa-video"></i>
+                            Create New Meeting
+                        </button>
+                    </div>
+                </div>
+
+                <div class="glass-card join-meet">
+                    <div class="card-header">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <h2>Join Meeting</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="joinUsername" placeholder="Your name">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-hashtag"></i>
+                            <input type="text" id="meetingId" placeholder="Enter meeting ID">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="text" id="joinPassword" placeholder="Enter meeting password">
+                        </div>
+                        <button onclick="joinMeeting()" class="secondary-btn">
+                            <i class="fas fa-door-open"></i>
+                            Join Meeting
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
